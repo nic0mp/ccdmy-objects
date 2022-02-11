@@ -26,7 +26,7 @@ let spaceship = {
   
   let propName =  'Active Mission';
   
-  // Invoke
+// Invoke
   let isActive = spaceship['Active Mission']
   console.log(spaceship['Active Mission'])
 
@@ -44,3 +44,21 @@ spaceship.color = 'glorious gold';
 spaceship.numEngines = 7;
 // Use the delete operator to remove the 'Secret Mission' property from the spaceship object.
 delete spaceship['Secret Mission'];
+
+// METHODS
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+
+// Write your code below
+// create an alienShip object. It should contain a method 
+// .retreat() which will console.log() the retreatMessage.
+let alienShip = {
+  retreat() {
+    console.log(retreatMessage)
+  },
+  takeOff() {
+    console.log('Spim... Borp... Glix... Blastoff!')
+  }
+};
+// Invoke your two methods: first .retreat() then .takeOff().
+alienShip.retreat();
+alienShip.takeOff();
