@@ -95,11 +95,13 @@ let spaceship = {
 //  Create a variable capFave and assign the captain‘s favorite food 
 // (the element in the 0th index of her 'favorite foods' array) to it 
 let capFave = spaceship.crew.captain['favorite foods'][0]
+
 // Right now the passengers property has a value of null. Instead, assign as 
 // its value an array of objects. These objects should represent the spaceship‘s 
 // passengers as individual objects. Make at least one passenger object in the array 
 // that has at least one key-value pair on it.
 spaceship.passengers = [{name: 'Chin Chunks'}]
+
 // Create a variable firstPassenger and assign the first passenger as its value 
 // (the element in the 0th index of the spaceship.passengers array you just made).
 let firstPassenger = spaceship.passengers[0]
