@@ -179,3 +179,24 @@ const robot = {
 };
 console.log(robot.provideInfo())
 // OUTPUT: I am 1E78V2 and my current energy level is 100. 
+
+// Arrow functions and this
+
+const robot = {
+  energyLevel: 100,
+  checkEnergy: () => {
+    console.log(`Energy is currently at ${this.energyLevel}%.`)
+  }
+}
+
+robot.checkEnergy(); 
+// Avoid arrow functions with this key ^^^
+
+const robot = {
+  energyLevel: 100,
+  checkEnergy() {
+    console.log(`Energy is currently at ${this.energyLevel}%.`)
+  }
+}
+
+robot.checkEnergy();
