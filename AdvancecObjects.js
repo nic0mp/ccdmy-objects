@@ -82,5 +82,19 @@ const tinCan = robotFactory('P-500', true);
 tinCan.beep()
 // output: Beep Boop
   
-  
-  
+// PROPERTY VALUE SHORTHAND
+
+const monsterFactory = (name, age) => {
+    return { 
+      name: name,
+      age: age
+    }
+  };
+
+//   NEW SHORTHAND
+const monsterFactory = (name, age) => {
+    return { 
+      name,
+      age 
+    }
+  };
