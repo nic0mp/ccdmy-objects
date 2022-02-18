@@ -97,4 +97,21 @@ const monsterFactory = (name, age) => {
       name,
       age 
     }
+    
+// DESTRUCTURED ASSIGNMENT
+const robot = {
+    model: '1E78V2',
+    energyLevel: 100,
+    functionality: {
+      beep() {
+        console.log('Beep Boop');
+      },
+      fireLaser() {
+        console.log('Pew Pew');
+      },
+    }
   };
+const { functionality } = robot;
+  
+  // call the .beep() method on functionality.
+functionality.beep()
