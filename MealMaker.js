@@ -42,7 +42,7 @@ const menu ={
         return dishes[randomIndex];
     },
     generateRandomMeal(){
-        const appetizer = getRandomDishFromCourse('appetizers'),
+        const appetizer = this.getRandomDishFromCourse('appetizers'),
 
     }
     
