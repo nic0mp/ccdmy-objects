@@ -54,3 +54,13 @@ const menu ={
   menu.addDishToCourse('appetizers', 'stuffed mushrooms', 12.00)
   menu.addDishToCourse('appetizers', 'chicken satay', 7.70)
   menu.addDishToCourse('appetizers', 'salad', 5.50)
+  menu.addDishToCourse('mains','Steak', 20.13);
+  menu.addDishToCourse('mains','Quesadilla', 12.90);
+  menu.addDishToCourse('mains','Cheeseburger', 10.90);
+  menu.addDishToCourse('desserts','cake',6.20);
+  menu.addDishToCourse('desserts','brownies',6.50);
+  menu.addDishToCourse('desserts','ice cream',6.90);
+  
+  let meal =menu.generateRandomMeal();
+  console.log(meal);
+  
