@@ -4,30 +4,31 @@ const menu ={
       mains : [],
       desserts : [],
     },
-    get _courses(){
-      return {
-        appetizers: this.appetizers,
-        mains: this.mains,
-        desserts: this.desserts
-      }
-    },
+   
     get appetizers(){
       return this._courses.appetizers;
-    },
-    set appetizers(appetizersIn){
-      this._courses.appetizers = appetizersIn;
     },
     get mains(){
       return this._courses.mains;
     },
-    set mains(mainsIn){
-      this._courses.main = mainsIn;
-    },
     get desserts(){
       return this._courses.desserts;
     },
+    set appetizers(appetizersIn){
+      this._courses.appetizers = appetizersIn;
+    }, 
+    set mains(mainsIn){
+      this._courses.main = mainsIn;
+    },
     set desserts(dessertsIn){
       this._courses.desserts = dessertsIn;
+    },
+    get courses(){
+      return {
+        appetizers: this.appetizers,
+        mains: this.mains,
+        desserts: this.desserts,
+      }
     },
     addDishToCourse(courseName, dishName, dishPrice){
       const dish = {
@@ -38,17 +39,17 @@ const menu ={
     },
     getRandomDishFromCourse(courseName){
       const dishes = this._courses[courseName];
-      const randomIndex = Math.floor(Math.random*dishes.length);
+      const randomIndex = Math.floor(Math.random()*dishes.length);
       return dishes[randomIndex];
     },
     generateRandomMeal(){
-      const appetizer = this.getRandomDishFromCourse('appetizers'),
-      const dessert = this.getRandomDishFromCourse('desserts'),
+      const appetizer = this.getRandomDishFromCourse('appetizers');
+      const main = this.getRandomDishFromCourse('mains');
+      const dessert = this.getRandomDishFromCourse('desserts');
       const totalPrice = appetizer.price + main.price + dessert.price;
   
-       return `Your meal is ${appetizer.name}, ${main.name}, ... The    price is $${totalPrice}.`;
+       return `Your meal is ${appetizer.name}, ${main.name} and ${dessert.name}. The price is $${totalPrice.toFixed(2)}.`;
     }
-    
   };
   
   menu.addDishToCourse('appetizers', 'stuffed mushrooms', 12.00)
