@@ -12,22 +12,22 @@ const menu ={
       }
     },
     get appetizers(){
-      return this._courses.appetizers
+      return this._courses.appetizers;
     },
     set appetizers(appetizersIn){
-      this._courses.appetizers = appetizersIn
+      this._courses.appetizers = appetizersIn;
     },
     get mains(){
-  
+      return this._courses.mains;
     },
     set mains(mainsIn){
-  
+      this._courses.main = mainsIn;
     },
     get desserts(){
-  
+      return this._courses.desserts;
     },
     set desserts(dessertsIn){
-  
+      this._courses.desserts = dessertsIn;
     },
     addDishToCourse(courseName, dishName, dishPrice){
       const dish = {
