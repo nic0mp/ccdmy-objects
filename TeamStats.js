@@ -45,8 +45,23 @@ const team = {
         lastName: lastName,
         age: age
       };
-      this.players.push(player)
-    }
+      this.players.push(player);
+    },
+    addGame(opponent, teamPoints, opponentPoints){
+      let game = {
+        opponent: opponent,
+        teamPoints: teamPoints,
+        opponentPoints: opponentPoints
+      };
+      this.games.push(game);
+    },
   };
-  team.addPlayer(Steph, Curry, 28);
-  console.log(team.players)
+  team.addPlayer('Steph', 'Curry', 28);
+  team.addPlayer('Lisa','Leslie', 44);
+  team.addPlayer('Bugs','Bunny', 76);
+  console.log(team.players);
+  
+  team.addGame('Heat', 95, 80);
+  team.addGame('Hornets', 99, 96);
+  team.addGame('Nets', 91, 87);
+  console.log(team.games);
