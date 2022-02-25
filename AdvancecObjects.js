@@ -116,7 +116,7 @@ const { functionality } = robot;
   // call the .beep() method on functionality.
 // functionality.beep()
 
-// BUIKT IN OBJECT METHODS
+// BUIKT IN OBJECT METHODS/
 const robot = {
 	model: 'SAL-1000',
   mobile: true,
